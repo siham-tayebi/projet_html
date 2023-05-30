@@ -1,0 +1,233 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="firstdoc.css">
+   <script type="text/javascript">
+		var tabl=[
+					{ 
+					image : '../ancien/Flamants roses.jpg',
+					name : 'flamant rose'
+					},
+					{ 
+					image : '../ancien/r.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/10.jpg',
+					name : 'Grue couronnée'
+					},
+					
+					{ 
+					image : '../ancien/11.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/6.jpg',
+					name : 'Cigogne blanche'
+					},
+					{ 
+					image : '../ancien/lacsid.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/13.jpg',
+					name : 'Cigogne blanche'
+					},
+					
+					
+					{ 
+					image : '../ancien/r.jpg',
+					name : 'lac sidi boughaba'
+					},
+					
+					
+					
+					{ 
+					image : '../ancien/p.jpg',
+					name : 'Cigogne blanche'
+					},
+					
+					{ 
+					image : '../ancien/lig.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/u.jpg',
+					name : 'Grue couronnée'
+					},
+					{ 
+					image : '../ancien/s.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/v.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/w.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/1.jpg',
+					name : 'Cigogne blanche'
+					},
+					{ 
+					image : '../ancien/2.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/4.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/5.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/7.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/k.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/8.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/h.jpg',
+					name : 'lac sidi boughaba'
+					},
+					{ 
+					image : '../ancien/hi.jpg',
+					name : 'Le hibou du Cap '
+					},
+					{ 
+					image : '../ancien/Grèbes huppés.jpg',
+					name : 'Grèbes huppés'
+					},
+					{ 
+					image : '../ancien/12.jpg',
+					name: 'sarcelle marbrée'
+					},
+					{ 
+					image : '../ancien/9.jpg',
+					name :'Le canard souchet'
+					},
+					{ 
+					image : '../ancien/pe.jpg',
+					name : 'Perroquet'
+					},
+					{ 
+					image : '../ancien/Aigrettes garzettes.jpg',
+					name : 'Les aigrettes garzettes'
+					}
+				
+		];
+		var i=0;
+		var interval=null;
+		function premier(){
+			document.getElementById('ecran').src=tabl[0].image;
+			let content = "<li>"+tabl[0].name+"</li>";
+			document.getElementById('comment').innerHTML= content;
+			
+		}
+		function dernier(){
+			document.getElementById('ecran').src=tabl[tabl.length-1].image;
+			let content = "<li>"+tabl[tabl.length-1].name+"</li>";
+			document.getElementById('comment').innerHTML= content;
+		}
+		function suivant(){
+			i++;
+			if(i>30){
+				i=0;
+			}
+			document.getElementById('ecran').src=tabl[i].image;
+			let content = "<li>"+tabl[i].name+"</li>";
+			document.getElementById('comment').innerHTML= content;
+		}
+		function precedent(){
+			i--;
+			if(i<0){
+			i=tabl.length-1;
+			}
+			document.getElementById('ecran').src=tabl[i].image;
+			let content = "<li>"+tabl[i].name+"</li>";
+			document.getElementById('comment').innerHTML= content;
+		}
+		function lecture(){
+			interval = setInterval(suivant,800);
+		}
+		function arret(){
+			clearInterval(interval);
+		}
+		</script>
+		<style type="text/css">
+			.container{
+			position:relative;
+			display:flex;
+			flex-direction:column;
+
+			align-items:center;
+			gap:10px;
+			}
+			.container img{
+				width:600px;
+				height:400px;
+				margin-top:-3%;
+				
+			}
+			#comment{
+			position:absolute;
+			width:400px;
+			height:50px;
+			background-color:rgba(0,100,255,.5);
+			border-radius:18px;
+			padding:20px;
+			top:-38px;
+			left:350px;
+			color:#fff;
+			font-size:2em;
+			font-weight:bold;
+			}
+		
+		</style>
+	</head>
+ </head>
+<body>
+<div class="header">
+	 <span class="headermenu">
+ 	    <a href="Acceuillac.html">acceuil</a>
+		<a href="Description.html">Description</a>
+		<a href="Galerie.html">Galerie</a>
+		 <a href="contact.html">contact</a>
+	  </span>
+	  <hr>
+</div>
+
+<div class="align">
+<h1><p>reserve naturel de lac sidi-boughaba</p></h1>
+<div class="container">
+			<img src="../ancien/Flamants roses.jpg" id="ecran">
+			<div id="comment">
+				<!--> Bienvenue (:  </!-->
+			</div>
+			<nav>
+				<button onclick="premier()">Premier</button>
+				<button onclick="suivant()">Suivant</button>
+				<button onclick="lecture()">Lecture</button>
+				<button onclick="arret()">Arrét</button>
+				<button onclick="precedent()">Précédent</button>
+				<button onclick="dernier()">Dernier</button>
+			</nav>
+	    </div>
+		
+
+	
+<address>
+This document was created by Tayebi Siham
+Last modified: 18/05/2023
+</address>	 
+</div>	
+</body>
+</html>

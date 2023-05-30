@@ -1,0 +1,59 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="firstdoc.css">
+   <script>
+    function changer(){
+	document.getelementbyid('back').style="backgroundColor='yellow';";}
+    </script>
+ </head>
+<body >
+<div class="header">
+	 <span class="headermenu">
+ 	    <a href="Acceuillac.html">acceuil</a>
+		<a href="Description.html">Description</a>
+		<a href="Galerie.html">Galerie</a>
+		 <a href="contact.html">contact</a>
+	  </span>
+	  <hr>				
+			<h1>Veuillez nous donner votre point de vue  sur cette lac.</h1>
+	<form method="get" action="#" >
+		<fieldset>
+        <legend>Résèrver:</legend>
+        <table>
+	    <tr>
+	     <td><label>Nom</label></td>
+	     <td><input type="texte" name="Nom" placeholder="Tappez votre nom " id="Nom" size="60" onfocus="this.style.backgroundColor='lightblue';" onblur="this.style.backgroundColor='white'"></td>
+	    </tr>
+	    <tr>
+	      <td><label>prénom</label></td>
+	      <td><input type="texte" name="prénom" placeholder="Tappez votre prénom " id="Nom" size="60" onfocus="this.style.backgroundColor='lightblue';" onblur="this.style.backgroundColor='white'"></td>
+	    </tr>
+	    <tr>
+	       <td><label>Genre</label></td>
+	       <td><input type="radio" name="genre">M</td><td><input type="radio" name="genre">F</td>
+	     </tr>
+	     <tr>
+			<td><label>Email:</label></td>
+			<td><textarea type="email" id="Email"size="60" onfocus="this.style.backgroundColor='lightblue';"onblur="this.style.backgroundColor='white'"></textarea></td>
+		</tr>
+		<tr>
+			<td><label>commentaire:</label></td>
+			<td><textarea type="text" id="commentaire"cols="60" onfocus="this.style.backgroundColor='lightblue';" onblur="this.style.backgroundColor='white'" ></textarea><td>
+		</tr>
+	    <tr>
+	       <td><label>Loisirs:</label></td>
+	       <td><input type="checkbox" name="genre">Natation</td><td><input type="checkbox" name="h">sport</td>
+	     </tr>
+	<tr>
+	<td><label>Date de résérve:</label></td>
+	<td><input type="date" id="Date de reserve" value="2023-01-01"></td>
+	</tr>
+</fieldset></table>
+				<input type="submit" value="Envoyer"></br>
+                 <input type="reset" value="renitialiser"></Form>
+		</div>
+
+	 
+	
+</body>
+</html>
